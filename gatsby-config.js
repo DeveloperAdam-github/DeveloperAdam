@@ -1,10 +1,37 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `DeveloperAdam`,
+    description: `DeveloperAdam, my website, my experiences, my projects.`,
+    author: `@DeveloperAdam`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "7v5vogcz",
+        dataset: "production",
+        token:
+          "skSGqPDl6NXALl9UINiXP6R9LmwgrJWSGlhuECKsWpcDtzcJBXmIoRwwhNsVSL8dpUGXF01tp4pYwjxKaTRBeTu4Gus7OHc8ulR51NtJR0j46m30yTpA6LK9XEDtKpjVyO7oluWCJSqPgj1pf2aMgk5ToYfaF2TOKLQUt7Qd0L9ipt506V3B",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Source Sans Pro`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -15,6 +42,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +52,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

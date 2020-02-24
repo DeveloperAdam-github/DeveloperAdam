@@ -1,16 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+export default props => {
+  console.log(props)
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+  return (
+    <div>
+      <h1>Hello gatsby</h1>
+      <Img fluid={props.data.file.childImageSharp.fluid} />
+    </div>
+  )
+}
 
-export default SecondPage
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "gatsby-icon.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`

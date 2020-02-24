@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "project": {
+    "name": "DeveloperAdamSanity"
+  },
+  "api": {
+    "projectId": "7v5vogcz",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/image-url",
+    "@sanity/client"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}

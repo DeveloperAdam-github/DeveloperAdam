@@ -1,7 +1,12 @@
 html {
-  font-family: sans-serif;
+  font-family: "Source Sans Pro";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap")
+    format();
 }
 body {
   margin: 0;
@@ -42,6 +47,9 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 a:active,
 a:hover {
@@ -200,7 +208,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: "Source Sans Pro";
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -343,6 +351,8 @@ ul {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
+  font-family: "Source Sans Pro";
+  font-style: italic;
 }
 ol {
   margin-left: 1.45rem;
@@ -510,6 +520,10 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  font-size: 100;
+}
+li:hover {
+  cursor: pointer;
 }
 ol li {
   padding-left: 0;
@@ -619,4 +633,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+textarea {
+  resize: none;
 }
