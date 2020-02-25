@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import Img from "gatsby-image"
+
 import Layout from "../components/layout"
 import BlockContent from "@sanity/block-content-to-react"
 import SEO from "../components/seo"
@@ -22,6 +24,13 @@ const blogPage = ({ data }) => {
             <li style={{ listStyle: "none", cursor: "auto" }} key={index}>
               <h2>{edge.node.title}</h2>
               <p>{edge.node.publishedAt}</p>
+              <img
+                src={
+                  edge.node.mainImage !== null
+                    ? edge.node.mainImage.asset.url
+                    : ""
+                }
+              />
               <div style={{ backgroundColor: "white", padding: "20px" }}>
                 <BlockContent blocks={edge.node._rawBody} />
               </div>
@@ -44,6 +53,14 @@ export const pageQuery = graphql`
           title
           publishedAt(formatString: "Do MMMM, YYYY")
           _rawBody
+          mainImage {
+            asset {
+              url
+              fluid(maxWidth: 200) {
+                src
+              }
+            }
+          }
         }
       }
     }
