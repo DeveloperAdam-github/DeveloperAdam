@@ -22,6 +22,7 @@ const blogPage = ({ data }) => {
             <li style={{ listStyle: "none", cursor: "auto" }} key={index}>
               <h2>{edge.node.title}</h2>
               <p>{edge.node.publishedAt}</p>
+              <img src={edge.node.mainImage !== null ? edge.node.mainImage.asset.url : ""}/>
               <div style={{ backgroundColor: "white", padding: "20px" }}>
                 <BlockContent blocks={edge.node._rawBody} />
               </div>
@@ -31,7 +32,7 @@ const blogPage = ({ data }) => {
       })}
     </Layout>
   )
-}
+};
 
 export default blogPage
 
@@ -44,8 +45,13 @@ export const pageQuery = graphql`
           title
           publishedAt(formatString: "Do MMMM, YYYY")
           _rawBody
+          mainImage {
+            asset {
+              url
+            }
+          }
         }
       }
     }
   }
-`
+`;
