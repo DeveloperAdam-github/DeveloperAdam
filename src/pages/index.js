@@ -59,6 +59,7 @@ const IndexPage = props => {
         <h2>Got a question?</h2>
         <p>Get in touch ....</p>
         <form
+          className="contact-form"
           style={{
             display: "flex",
             flexDirection: "column",
