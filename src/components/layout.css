@@ -13,6 +13,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media (max-width: 630px) {
+  .banner-header-text {
+    width: 250px;
+    height: 90px;
+  }
+  .banner-header-p {
+    visibility: hidden;
+  }
+  .form {
+    width: 350px;
+  }
+}
+
 article,
 aside,
 details,

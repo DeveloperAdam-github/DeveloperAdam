@@ -30,7 +30,9 @@ const IndexPage = props => {
           }}
         >
           <h1>Welcome</h1>
-          <p style={{ color: "coral" }}>Check out my projects or my blog!</p>
+          <p className="banner-header-p" style={{ color: "coral" }}>
+            Check out my projects or my blog!
+          </p>
         </div>
       </div>
       <hr />
