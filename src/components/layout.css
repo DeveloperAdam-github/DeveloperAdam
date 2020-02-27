@@ -23,7 +23,8 @@ body {
     visibility: hidden;
   }
   .contact-form {
-    width: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

@@ -66,14 +66,23 @@ const IndexPage = props => {
             width: "450px",
           }}
         >
-          <input type="text" id="name" placeholder="Name" />
-          <input type="text" id="email" placeholder="Email" />
-          <textarea name="" id="message" cols="20" rows="5"></textarea>
+          <input className="name" type="text" id="name" placeholder="Name" />
+          <input className="email" type="text" id="email" placeholder="Email" />
+          <textarea
+            className="message"
+            name=""
+            id="message"
+            cols="20"
+            rows="5"
+            placeholder="Your message here"
+          ></textarea>
           <button
             style={{
               backgroundColor: "coral",
               fontSize: "20px",
               width: "100px",
+              justifyContent: "center",
+              display: "flex",
               marginLeft: "10.1rem",
               marginTop: "0.5rem",
               borderRadius: "4px",
