@@ -44,7 +44,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-csp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
