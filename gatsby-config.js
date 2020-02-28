@@ -3,6 +3,7 @@ module.exports = {
     title: `DeveloperAdam`,
     description: `DeveloperAdam, my website, my experiences, my projects.`,
     author: `@DeveloperAdam`,
+    siteUrl: `https://developeradam.com`,
   },
   plugins: [
     {
